@@ -1,0 +1,73 @@
+/* 1. Fondo Oscuro (Backdrop) */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6); /* Oscurece el fondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Asegura que esté por encima de todos los demás elementos */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+/* 2. Contenido del Modal (La Tarjeta Flotante) */
+.modal-content {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 500px; /* Tamaño máximo adecuado para el formulario */
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+/* 3. Estilos de Encabezado y Botón de Cierre */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    border-bottom: 1px solid #eee;
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: #333;
+}
+
+.close-modal-button {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #888;
+    line-height: 1; /* Para alinear el carácter 'x' */
+    transition: color 0.2s;
+}
+
+.close-modal-button:hover {
+    color: #dc3545; /* Rojo de peligro */
+}
+
+/* 4. Cuerpo del Modal (Donde va el formulario) */
+.modal-body {
+    padding: 25px;
+    /* El FormCreateProduct ya tiene su propio padding interno */
+}
+
+/* **CLASE PARA MOSTRAR EL MODAL** */
+/* Debe ser añadida por React (aunque aquí usamos el operador &&) */
+.modal-backdrop.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-backdrop.is-open .modal-content {
+    transform: scale(1);
+}

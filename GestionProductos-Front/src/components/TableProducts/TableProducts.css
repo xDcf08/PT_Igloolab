@@ -1,0 +1,51 @@
+/* Estilos de Contenedor de Tabla (si es necesario) */
+.table-container {
+    width: 90%;
+    margin: 30px auto;
+    overflow-x: auto; /* Permite desplazamiento en móviles */
+}
+
+/* Estilos de Tabla */
+.table-products {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden; /* Asegura que el borde redondo se aplique */
+}
+
+.table-head-content th {
+    background-color: #f8f9fa; /* Gris claro para encabezado */
+    color: #343a40;
+    padding: 15px 20px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.table-body-content td {
+    padding: 15px 20px;
+    border-bottom: 1px solid #e9ecef;
+    color: #495057;
+}
+
+.table-body-content tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilos del Botón de Eliminar en la Tabla */
+.table-body-content button {
+    background-color: #dc3545; /* Rojo de peligro */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background-color 0.3s;
+}
+
+.table-body-content button:hover {
+    background-color: #c82333;
+}
