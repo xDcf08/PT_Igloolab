@@ -325,7 +325,7 @@ public class ProductsController : ControllerBase
 
 **Camilo Flórez**  
 Desarrollador Full Stack  
-📧 [camilo.florez@example.com](mailto:camilo.florez@example.com)  
+📧 [kmiloflorezs8@gmail.com](mailto:kmiloflorezs8@gmail.com)  
 📍 Bucaramanga, Colombia  
 
 Proyecto desarrollado como parte de la **Prueba Técnica Developer Full Stack – Igloolab**.
