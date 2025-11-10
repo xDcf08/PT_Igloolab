@@ -48,6 +48,61 @@ El proyecto cumple todos los requisitos funcionales y técnicos solicitados, inc
 
 ---
 
+## 📱 Versión Móvil (React Native)
+
+Como parte opcional de la prueba técnica, se desarrolló una versión **estática** de la aplicación móvil en **React Native con TypeScript**, cumpliendo con la funcionalidad de listar y eliminar productos, sin conexión a la API.
+
+### 📦 Estructura
+
+```
+GestionProductos-Mobile/
+ ├── src/
+ │   ├── data/
+ │   │   └── products.ts       # Datos estáticos locales
+ │   └── components/
+ │       └── ProductList.tsx   # Pantalla principal con listado y modal de detalle
+ ├── App.tsx
+ └── package.json
+```
+
+### ⚙️ Características
+- Implementado con **React Native + TypeScript**
+- **Lista de productos estáticos** (`staticProducts`)
+- **Modal de detalle** con opción para eliminar del listado local
+- **Diseño responsivo y limpio** usando `StyleSheet` nativo
+
+### 🖼️ Interacciones
+- **Tocar un producto:** abre un modal con su descripción y precio  
+- **Botón “Eliminar”:** remueve el producto de la lista local  
+- **Botón “Cerrar”:** cierra el modal sin modificar datos  
+
+### 🧠 Nota
+Esta versión no consume el backend, ya que su propósito es **demostrar la estructura y funcionalidad visual** del módulo móvil, como se especificó en el requerimiento de la prueba.
+
+Ejemplo de datos utilizados (`src/data/products.ts`):
+```ts
+export const staticProducts = [
+  {
+    id: '1',
+    name: 'Laptop Gaming',
+    price: 1200.00,
+    description: 'Potente laptop para juegos de alta gama con tarjeta gráfica de última generación.'
+  },
+  {
+    id: '2',
+    name: 'Monitor Curvo 32"',
+    price: 450.50,
+    description: 'Monitor curvo de 32 pulgadas con resolución 4K y 144Hz de tasa de refresco.'
+  },
+  {
+    id: '3',
+    name: 'Mouse Inalámbrico',
+    price: 35.99,
+    description: 'Mouse ergonómico inalámbrico con sensor óptico de alta precisión.'
+  }
+];
+```
+
 ## ⚙️ Requisitos Previos
 
 Antes de ejecutar el proyecto, asegúrate de tener instalado:
@@ -103,6 +158,14 @@ pnpm run dev
 ```
 
 > La aplicación estará disponible en: **http://localhost:5173**
+
+### 🔹 Iniciar la App Móvil (React Native)
+```bash
+cd GestionProductos-Mobile
+pnpm install
+pnpm run start
+```
+> Puedes ejecutar la app con **Expo** o **React Native CLI**.
 
 ---
 
@@ -253,6 +316,7 @@ public class ProductsController : ControllerBase
 | Migraciones con TypeORM | ✅ |
 | Frontend React + TS + Zustand | ✅ |
 | Documentación Swagger | ✅ |
+| Versión móvil en React Native (estática) | ✅ |
 | Explicación C# opcional | ✅ |
 
 ---
